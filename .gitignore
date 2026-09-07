@@ -13,18 +13,12 @@ venv/
 *.swp
 *~
 
-# LaTeX build artifacts (regenerables con paper/compile.sh)
-paper/*.aux
-paper/*.bbl
-paper/*.bcf
-paper/*.blg
-paper/*.fdb_latexmk
-paper/*.fls
-paper/*.log
-paper/*.out
-paper/*.run.xml
-paper/*.synctex.gz
-paper/*.toc
+# Manuscrito subido aparte (no incluido en el repositorio)
+paper/*.tex
+paper/*.pdf
+paper/*.bib
+paper/.latexmkrc
+paper/compile.sh
 
 # Logs
 *.log

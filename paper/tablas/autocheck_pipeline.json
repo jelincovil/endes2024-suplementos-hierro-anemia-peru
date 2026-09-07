@@ -1,0 +1,142 @@
+{
+  "n_checks": 26,
+  "n_pass": 26,
+  "n_fail": 0,
+  "n_critical_fail": 0,
+  "all_critical_pass": true,
+  "checks": [
+    {
+      "id": "files",
+      "pass": true,
+      "detail": "tabla_sensibilidades_cuerpo + resumen_final"
+    },
+    {
+      "id": "rd_modsev_ipw_design",
+      "pass": true,
+      "detail": "RD mod/sev = -0.02792, IC [-0.04485; -0.01168]",
+      "value": -0.0279244004772558
+    },
+    {
+      "id": "bootstrap_2000",
+      "pass": true,
+      "detail": "bootstrap_n=2000",
+      "value": 2000
+    },
+    {
+      "id": "n_expuestos",
+      "pass": true,
+      "detail": "n_expuestos=2194",
+      "value": 2194
+    },
+    {
+      "id": "sens_ci_present",
+      "pass": true,
+      "detail": "IC bootstrap en departamental, sin restricción y 12 meses"
+    },
+    {
+      "id": "sin_restriccion_especificada",
+      "pass": true,
+      "detail": "sin_restriccion n=8800 (8800 esperado)"
+    },
+    {
+      "id": "seed",
+      "pass": true,
+      "detail": "seed=20260710"
+    },
+    {
+      "id": "n_confirmatorio",
+      "pass": true,
+      "detail": "n=6703, tratados=2194"
+    },
+    {
+      "id": "ancla_resumen_final",
+      "pass": true,
+      "detail": "RD e IC del cuerpo consistentes con resumen_final.json"
+    },
+    {
+      "id": "ancla_cuerpo_json",
+      "pass": true,
+      "detail": "resumen_sensibilidades_cuerpo.json es ancla del cuerpo"
+    },
+    {
+      "id": "exists_tabla_0_flujo_muestral.csv",
+      "pass": true,
+      "detail": "tabla_0_flujo_muestral.csv"
+    },
+    {
+      "id": "exists_tabla_1_caracteristicas.csv",
+      "pass": true,
+      "detail": "tabla_1_caracteristicas.csv"
+    },
+    {
+      "id": "exists_tabla_2_efectos_primarios.csv",
+      "pass": true,
+      "detail": "tabla_2_efectos_primarios.csv"
+    },
+    {
+      "id": "exists_tabla_sensibilidades_cuerpo.csv",
+      "pass": true,
+      "detail": "tabla_sensibilidades_cuerpo.csv"
+    },
+    {
+      "id": "exists_tabla_3_robustez.csv",
+      "pass": true,
+      "detail": "tabla_3_robustez.csv"
+    },
+    {
+      "id": "exists_tabla_S1_missingness.csv",
+      "pass": true,
+      "detail": "tabla_S1_missingness.csv"
+    },
+    {
+      "id": "exists_tabla_S2_balance_smd.csv",
+      "pass": true,
+      "detail": "tabla_S2_balance_smd.csv"
+    },
+    {
+      "id": "exists_tabla_S8_mice.csv",
+      "pass": true,
+      "detail": "tabla_S8_mice.csv"
+    },
+    {
+      "id": "exists_tabla_S_lee_bounds.csv",
+      "pass": true,
+      "detail": "tabla_S_lee_bounds.csv"
+    },
+    {
+      "id": "exists_tabla_S_mediacion_diarrea.csv",
+      "pass": true,
+      "detail": "tabla_S_mediacion_diarrea.csv"
+    },
+    {
+      "id": "exists_tabla_S_transporte.csv",
+      "pass": true,
+      "detail": "tabla_S_transporte.csv"
+    },
+    {
+      "id": "exists_tabla_S_sandwich_survey.csv",
+      "pass": true,
+      "detail": "tabla_S_sandwich_survey.csv"
+    },
+    {
+      "id": "exists_tabla_S_literatura_comparativa.csv",
+      "pass": true,
+      "detail": "tabla_S_literatura_comparativa.csv"
+    },
+    {
+      "id": "exists_figura_flujo_muestral.png",
+      "pass": true,
+      "detail": "figura_flujo_muestral.png"
+    },
+    {
+      "id": "exists_figura_1_love_plot.png",
+      "pass": true,
+      "detail": "figura_1_love_plot.png"
+    },
+    {
+      "id": "exists_figura_bosque_esencial.png",
+      "pass": true,
+      "detail": "figura_bosque_esencial.png"
+    }
+  ]
+}
