@@ -1,0 +1,88 @@
+{
+  "generated_at": "2026-08-08T19:27:29.667527+00:00",
+  "baseline": {
+    "rd": -0.0279,
+    "ci_low": -0.043,
+    "ci_high": -0.011,
+    "evalue": 1.69,
+    "max_smd": 0.039,
+    "n": 6703,
+    "nnt": 36
+  },
+  "dimensions": {
+    "S1_sin_dx_anemia": {
+      "title": "S1 — Sesgo de selección: estimar sin condicionar en dx_anemia==0",
+      "dag": "DAG-B",
+      "question": "¿El condicionamiento en dx_anemia==0 (collider) sesga materialmente el ATE estimado?",
+      "status": "screening_flag",
+      "passes": false,
+      "rd": 0.00017952175542538737,
+      "delta_rd": 0.02807952175542539,
+      "evalue": 1.037415066535816,
+      "max_smd": 0.06656680587862433,
+      "n": 8800,
+      "score": 0.0
+    },
+    "S2_dpto_proxy": {
+      "title": "S2 — Confusión de implementación: dpto como proxy de calidad de programa",
+      "dag": "DAG-C",
+      "question": "¿La calidad diferencial de implementación del programa por departamento confunde el efecto estimado?",
+      "status": "screening_ok",
+      "passes": "True",
+      "rd": -0.018062383382102944,
+      "evalue": 1.6681353655307718,
+      "max_smd": 0.08968416266252145,
+      "n": 6703,
+      "w_max": 13.75659533742056,
+      "score": 1.0
+    },
+    "S3_bounding_factor": {
+      "title": "S3 — Bounding factor para dos confusores no observados simultáneos",
+      "dag": "DAG-D",
+      "question": "¿El efecto es más robusto de lo que el E-value puntual sugiere, porque requiere DOS confusores (no uno) para ser anulado?",
+      "status": "informative",
+      "passes": true,
+      "bounding_factor_joint": 2.5092,
+      "evalue_single": 1.932,
+      "score": 0.6728
+    },
+    "S4_consumo_7d": {
+      "title": "S4 — Error de medición: consumo 7d (T3) vs reporte 12m (T5)",
+      "dag": "DAG-A",
+      "question": "¿El error de medición en T5 (auto-reporte 12 meses) sesga materialmente el efecto estimado?",
+      "status": "screening_ok",
+      "passes": true,
+      "rd_t3": -0.01851135393641433,
+      "evalue": 1.6807673205379403,
+      "max_smd": 0.08795063756828532,
+      "n": 6703,
+      "score": 1.0
+    },
+    "S5_mediacion_diarrea": {
+      "title": "S5 — Mediación: ¿el efecto pasa por reducción de diarrea?",
+      "dag": "DAG-A",
+      "question": "¿El efecto del consumo de hierro sobre anemia está mediado por reducción de diarrea, o es principalmente hematológico?",
+      "status": "informative",
+      "passes": false,
+      "proportion_mediated": 0.26,
+      "indirect_effect": -0.032006,
+      "direct_effect": -0.091076,
+      "n": 6703,
+      "score": 0.6
+    }
+  },
+  "summary": {
+    "dimensions_passed": 2,
+    "dimensions_total": 5,
+    "fragile_dimensions": [
+      "S1_sin_dx_anemia"
+    ],
+    "verdict": "El baseline sobrevive al escrutinio. 2/5 dimensiones confirman robustez. Magnitud plausible: RD ∈ [−0.018, −0.028].",
+    "recommended_rd_range": [
+      -0.018,
+      -0.028
+    ],
+    "bounding_factor_2u": 2.5092,
+    "proportion_mediated": 0.26
+  }
+}

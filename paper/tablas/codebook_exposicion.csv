@@ -1,0 +1,134 @@
+seccion,variable,estadistico,valor
+frecuencias,T1,n,14409
+frecuencias,T1,n_missing,19
+frecuencias,T1,mean,0.6301000118255615
+frecuencias,T1,sd,0.4828000068664551
+frecuencias,T1,min,0.0
+frecuencias,T1,max,1.0
+frecuencias,T2,n,14410
+frecuencias,T2,n_missing,18
+frecuencias,T2,mean,0.2603999972343445
+frecuencias,T2,sd,0.4388999938964844
+frecuencias,T2,min,0.0
+frecuencias,T2,max,1.0
+frecuencias,T3,n,14428
+frecuencias,T3,n_missing,0
+frecuencias,T3,mean,0.2206999957561493
+frecuencias,T3,sd,0.4147000014781952
+frecuencias,T3,min,0.0
+frecuencias,T3,max,1.0
+frecuencias,T4,n,14428
+frecuencias,T4,n_missing,0
+frecuencias,T4,mean,1.5206999778747559
+frecuencias,T4,sd,1.7675000429153442
+frecuencias,T4,min,0.0
+frecuencias,T4,max,5.0
+frecuencias,T5,n,14428
+frecuencias,T5,n_missing,0
+frecuencias,T5,mean,0.44369998574256897
+frecuencias,T5,sd,0.8794999718666077
+frecuencias,T5,min,0.0
+frecuencias,T5,max,5.0
+frecuencias,n_consumidos,n,14428
+frecuencias,n_consumidos,n_missing,0
+frecuencias,n_consumidos,mean,0.26499998569488525
+frecuencias,n_consumidos,sd,0.453000009059906
+frecuencias,n_consumidos,min,0.0
+frecuencias,n_consumidos,max,3.0
+frecuencias,n_recibidos,n,14428
+frecuencias,n_recibidos,n_missing,0
+frecuencias,n_recibidos,mean,0.8220000267028809
+frecuencias,n_recibidos,sd,0.7554000020027161
+frecuencias,n_recibidos,min,0.0
+frecuencias,n_recibidos,max,4.0
+frecuencias,total_toma,n,14428
+frecuencias,total_toma,n_missing,0
+frecuencias,total_toma,mean,6.30649995803833
+frecuencias,total_toma,sd,19.41670036315918
+frecuencias,total_toma,min,0.0
+frecuencias,total_toma,max,360.0
+frecuencias,total_rec,n,14428
+frecuencias,total_rec,n_missing,0
+frecuencias,total_rec,mean,9.701299667358398
+frecuencias,total_rec,sd,25.490100860595703
+frecuencias,total_rec,min,0.0
+frecuencias,total_rec,max,360.0
+niveles_T5,T5=0,n,10676
+niveles_T5,T5=0,pct,74.0
+niveles_T5,T5=0,definicion,Sin consumo efectivo
+niveles_T5,T5=1,n,1867
+niveles_T5,T5=1,pct,12.9
+niveles_T5,T5=1,definicion,1 tipo vehículo (jarabe/tableta/etc.)
+niveles_T5,T5=2,n,1438
+niveles_T5,T5=2,pct,10.0
+niveles_T5,T5=2,definicion,2 tipos
+niveles_T5,T5=3,n,199
+niveles_T5,T5=3,pct,1.4
+niveles_T5,T5=3,definicion,3 tipos
+niveles_T5,T5=4,n,179
+niveles_T5,T5=4,pct,1.2
+niveles_T5,T5=4,definicion,4 tipos
+niveles_T5,T5=5,n,69
+niveles_T5,T5=5,pct,0.5
+niveles_T5,T5=5,definicion,4 tipos + intensidad alta (N_consumidos=2 o 3)
+xtab_T5_n_consumidos,T5=0.0_nc=0.0,n,10676
+xtab_T5_n_consumidos,T5=1.0_nc=1.0,n,1867
+xtab_T5_n_consumidos,T5=2.0_nc=1.0,n,1438
+xtab_T5_n_consumidos,T5=3.0_nc=1.0,n,199
+xtab_T5_n_consumidos,T5=4.0_nc=1.0,n,179
+xtab_T5_n_consumidos,T5=5.0_nc=2.0,n,66
+xtab_T5_n_consumidos,T5=5.0_nc=3.0,n,3
+xtab_T5_n_consumidos,T5=All_nc=0.0,n,10676
+xtab_T5_n_consumidos,T5=All_nc=1.0,n,3683
+xtab_T5_n_consumidos,T5=All_nc=2.0,n,66
+xtab_T5_n_consumidos,T5=All_nc=3.0,n,3
+xtab_T5_T4,T5=0.0_T4=0.0,n,4781
+xtab_T5_T4,T5=0.0_T4=1.0,n,2968
+xtab_T5_T4,T5=0.0_T4=2.0,n,1150
+xtab_T5_T4,T5=0.0_T4=3.0,n,290
+xtab_T5_T4,T5=0.0_T4=4.0,n,5
+xtab_T5_T4,T5=0.0_T4=5.0,n,1482
+xtab_T5_T4,T5=1.0_T4=0.0,n,222
+xtab_T5_T4,T5=1.0_T4=1.0,n,1007
+xtab_T5_T4,T5=1.0_T4=2.0,n,59
+xtab_T5_T4,T5=1.0_T4=3.0,n,11
+xtab_T5_T4,T5=1.0_T4=4.0,n,1
+xtab_T5_T4,T5=1.0_T4=5.0,n,567
+xtab_T5_T4,T5=2.0_T4=0.0,n,251
+xtab_T5_T4,T5=2.0_T4=1.0,n,52
+xtab_T5_T4,T5=2.0_T4=2.0,n,900
+xtab_T5_T4,T5=2.0_T4=3.0,n,4
+xtab_T5_T4,T5=2.0_T4=5.0,n,231
+xtab_T5_T4,T5=3.0_T4=0.0,n,8
+xtab_T5_T4,T5=3.0_T4=1.0,n,3
+xtab_T5_T4,T5=3.0_T4=2.0,n,5
+xtab_T5_T4,T5=3.0_T4=3.0,n,35
+xtab_T5_T4,T5=3.0_T4=5.0,n,148
+xtab_T5_T4,T5=4.0_T4=0.0,n,83
+xtab_T5_T4,T5=4.0_T4=1.0,n,50
+xtab_T5_T4,T5=4.0_T4=2.0,n,15
+xtab_T5_T4,T5=4.0_T4=3.0,n,4
+xtab_T5_T4,T5=4.0_T4=4.0,n,3
+xtab_T5_T4,T5=4.0_T4=5.0,n,24
+xtab_T5_T4,T5=5.0_T4=0.0,n,4
+xtab_T5_T4,T5=5.0_T4=1.0,n,7
+xtab_T5_T4,T5=5.0_T4=2.0,n,6
+xtab_T5_T4,T5=5.0_T4=3.0,n,2
+xtab_T5_T4,T5=5.0_T4=5.0,n,50
+xtab_T5_T4,T5=All_T4=0.0,n,5349
+xtab_T5_T4,T5=All_T4=1.0,n,4087
+xtab_T5_T4,T5=All_T4=2.0,n,2135
+xtab_T5_T4,T5=All_T4=3.0,n,346
+xtab_T5_T4,T5=All_T4=4.0,n,9
+xtab_T5_T4,T5=All_T4=5.0,n,2502
+definiciones,T1,definicion,Recibió suplemento de hierro (auto-reporte binario)
+definiciones,T2,definicion,"Número de tipos de vehículo (jarabe, tableta, etc.)"
+definiciones,T3,definicion,Alguna vez tomó el suplemento
+definiciones,T4,definicion,Número de vehículos consumidos
+definiciones,T5,definicion,"Índice ordinal 0–5: 0=sin consumo efectivo, 1–4=n_consumidos=niveles, 5=4 tipos + alta intensidad (n_consumidos∈{2,3})"
+definiciones,n_consumidos,definicion,Número de tipos de vehículo consumidos (rango en datos)
+definiciones,n_recibidos,definicion,Número de tipos de vehículo recibidos
+definiciones,total_toma,definicion,Total de tomas del suplemento
+definiciones,total_rec,definicion,Total de suplementos recibidos
+definiciones,received_any,definicion,T1==1 OR n_recibidos>=1 OR total_rec>0
+definiciones,T5_ge1,definicion,Consumo efectivo: T5 >= 1 (exposición principal)

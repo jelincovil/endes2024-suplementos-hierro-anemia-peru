@@ -1,0 +1,2 @@
+outcome,n_treated,n_control,p0_control,p1_treated_crude,rd_crude,mde_80pct_alpha05,power_posthoc_crude_rd,nota
+anemia_modsev,2194,4509,0.09913506320691949,0.14904284412032817,0.04990778091340868,0.021793325404180178,0.9998943151931934,Aprox. iid (sin cluster); MDE real con diseño suele ser mayor.

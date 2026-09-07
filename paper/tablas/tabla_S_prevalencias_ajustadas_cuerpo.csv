@@ -1,0 +1,2 @@
+outcome,prev_ajustada_consumo,prev_ajustada_sin_consumo,diferencia_prevalencias,n,n_consumo,n_sin_consumo,bootstrap_iterations,seed
+anemia_modsev,0.09293244273572975,0.12085684321298557,-0.027924400477255855,6703,2194,4509,2000,20260710

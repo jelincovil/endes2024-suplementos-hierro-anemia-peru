@@ -1,0 +1,2 @@
+outcome,estimate,se_cluster,p_cluster,ci_low,ci_high,n_clusters,metodo
+anemia_modsev,-0.02792440047725584,0.009381391905388304,0.0029148941122098784,-0.046311590736672514,-0.009537210217839171,2720,WLS IPW×diseño + SE cluster(hv001)

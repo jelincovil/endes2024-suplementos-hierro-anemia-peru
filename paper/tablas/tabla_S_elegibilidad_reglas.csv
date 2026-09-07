@@ -1,0 +1,6 @@
+regla,descripcion
+received_any==1,Receptor del programa (T1|n_recibidos|total_rec)
+dx_anemia==0,Sin diagnóstico previo de anemia del niño (autorreporte)
+complete_case,"Sin missing en covs pretratamiento, outcomes y diseño"
+tratamiento,T5_ge1 = (T5>=1) consumo reportado ≥1 vehículo
+funcion,build_eligibility() + make_analytic_sample() en pipeline

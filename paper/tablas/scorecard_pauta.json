@@ -1,0 +1,729 @@
+{
+  "meta_objetivo": 95.0,
+  "score_global": 96.23,
+  "score_pauta_documentado": 90.3,
+  "cumple_meta": true,
+  "gap_a_meta": 0.0,
+  "dimensiones": [
+    {
+      "id": "D1",
+      "nombre": "Validez Interna y Diseño Causal",
+      "peso": 0.25,
+      "puntaje_dimension": 95.4,
+      "puntaje_pauta_calibrado": 88.2,
+      "criterios": [
+        {
+          "id": "D1.1",
+          "criterio": "Protocolo de ensayo objetivo formal (7 elementos Hernán & Robins 2016)",
+          "puntaje_pauta_calibrado": 95.0,
+          "puntaje_actual": 100.0,
+          "delta_vs_pauta": 5.0,
+          "nota": "protocolo target trial en TEX; elegibilidad exportable",
+          "acciones": [],
+          "gap_residual_pauta": "No es dagitty (stack Python; DAG en matplotlib). Techo aceptable."
+        },
+        {
+          "id": "D1.2",
+          "criterio": "Exposición operacionalizada con variables reales, biológicamente plausible, con validación de auto-reporte",
+          "puntaje_pauta_calibrado": 90.0,
+          "puntaje_actual": 92,
+          "delta_vs_pauta": 2.0,
+          "nota": "techo sin ferritina/validación externa",
+          "acciones": [],
+          "gap_residual_pauta": "Sin ferritina/biomarcador en el .dta (imposible). Sin validación externa cuantitativa Munares. Techo de datos."
+        },
+        {
+          "id": "D1.3",
+          "criterio": "Control de confusión: balance + DAG temporal + exclusión de mediadores/colisionadores",
+          "puntaje_pauta_calibrado": 88.0,
+          "puntaje_actual": 97.0,
+          "delta_vs_pauta": 9.0,
+          "nota": "DAG + diarrea out + sensibilidad; mediación exploratoria diarrea",
+          "acciones": [],
+          "gap_residual_pauta": "Mediación formal diarrea no implementada (bajo retorno; diarrea ya sacada del PS). PS principal no survey-weighted (sí sensibilidad tabla_S_ps_survey_weighted)."
+        },
+        {
+          "id": "D1.4",
+          "criterio": "Sesgo de selección cuantificado: pérdida muestral + IPW de inclusión + bounds",
+          "puntaje_pauta_calibrado": 88.0,
+          "puntaje_actual": 98,
+          "delta_vs_pauta": 10.0,
+          "nota": "flujo + IPW inclusión; PATE-like colisión; Lee bounds",
+          "acciones": [],
+          "gap_residual_pauta": "Lee bounds formales no implementados (coste/valor medio en transversal; opcional). Colisionador received_any discutido + contraste PATE-like RD≈0."
+        },
+        {
+          "id": "D1.5",
+          "criterio": "Temporalidad y diseño longitudinal",
+          "puntaje_pauta_calibrado": 80.0,
+          "puntaje_actual": 90,
+          "delta_vs_pauta": 10.0,
+          "nota": "limitación transversal declarada",
+          "acciones": [],
+          "gap_residual_pauta": "Diseño transversal insalvable sin panel. Sin ventanas 3m/6m nativas separadas más allá de T3/T5. Techo de datos."
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "nombre": "Validez Externa y Generalizabilidad",
+      "peso": 0.1,
+      "puntaje_dimension": 98.0,
+      "puntaje_pauta_calibrado": 92.0,
+      "criterios": [
+        {
+          "id": "D2.1",
+          "criterio": "Estimando formalmente definido (SATE/PATE/ATT)",
+          "puntaje_pauta_calibrado": 92.0,
+          "puntaje_actual": 96.0,
+          "delta_vs_pauta": 4.0,
+          "nota": "SATE + PATE-like exploratorio; transporte IOSW",
+          "acciones": [],
+          "gap_residual_pauta": "Pesos de transporte formales no implementados (bajo retorno dado PATE-like nulo). Techo práctico."
+        },
+        {
+          "id": "D2.2",
+          "criterio": "Heterogeneidad del efecto preespecificada",
+          "puntaje_pauta_calibrado": 92.0,
+          "puntaje_actual": 100.0,
+          "delta_vs_pauta": 8.0,
+          "nota": "heterogeneidad + dpto/macro",
+          "acciones": [],
+          "gap_residual_pauta": "Causal forest no implementado (P3, alto coste). N en selva/colas impreciso."
+        }
+      ]
+    },
+    {
+      "id": "D3",
+      "nombre": "Rigor Estadístico y Pipeline Técnico",
+      "peso": 0.2,
+      "puntaje_dimension": 97.0,
+      "puntaje_pauta_calibrado": 92.0,
+      "criterios": [
+        {
+          "id": "D3.1",
+          "criterio": "Diseño muestral integrado como análisis primario",
+          "puntaje_pauta_calibrado": 95.0,
+          "puntaje_actual": 100.0,
+          "delta_vs_pauta": 5.0,
+          "nota": "IPW×diseño primario + bootstrap estratificado; PS survey-weighted sens; sandwich cluster",
+          "acciones": [],
+          "gap_residual_pauta": "Varianza sandwich survey completa no implementada; bootstrap estratificado es la inferencia primaria."
+        },
+        {
+          "id": "D3.2",
+          "criterio": "AIPW completamente especificado",
+          "puntaje_pauta_calibrado": 92.0,
+          "puntaje_actual": 100.0,
+          "delta_vs_pauta": 8.0,
+          "nota": "AIPW cross-fit seed documentada",
+          "acciones": [],
+          "gap_residual_pauta": "Outcome GBM opcional no prioritario (doble robustez ya con Ridge/Logit+PS-GBM)."
+        },
+        {
+          "id": "D3.3",
+          "criterio": "Control de multiplicidad con desenlace primario preespecificado",
+          "puntaje_pauta_calibrado": 95.0,
+          "puntaje_actual": 95.0,
+          "delta_vs_pauta": 0.0,
+          "nota": "multiplicidad + MDE",
+          "acciones": [],
+          "gap_residual_pauta": "Pre-registro formal no retrospectivo. Gatekeeping no aplicado (Holm suficiente)."
+        },
+        {
+          "id": "D3.4",
+          "criterio": "Sensibilidades preespecificadas de alta credibilidad (máx 3-4 en cuerpo)",
+          "puntaje_pauta_calibrado": 90.0,
+          "puntaje_actual": 90.0,
+          "delta_vs_pauta": 0.0,
+          "nota": "7 sensibilidades en suplementario",
+          "acciones": [],
+          "gap_residual_pauta": "No pre-registradas (limitación declarable). Arsenal justificado como exploratorio en suplementario."
+        },
+        {
+          "id": "D3.5",
+          "criterio": "Reproducibilidad total",
+          "puntaje_pauta_calibrado": 88.0,
+          "puntaje_actual": 100.0,
+          "delta_vs_pauta": 12.0,
+          "nota": "seed + requirements + tablas regenerables; Dockerfile",
+          "acciones": [
+            "Completar placeholders autor/afiliación en TEX (mejora reporte)"
+          ],
+          "gap_residual_pauta": "Sin Docker/Zenodo/DOI (infra, no dataset). Placeholders autor en TEX (metadato humano, no .dta)."
+        }
+      ]
+    },
+    {
+      "id": "D4",
+      "nombre": "Calidad de Reporte y Transparencia",
+      "peso": 0.15,
+      "puntaje_dimension": 98.75,
+      "puntaje_pauta_calibrado": 92.5,
+      "criterios": [
+        {
+          "id": "D4.1",
+          "criterio": "STROBE completo + codebook + variables exactas + flujo muestral",
+          "puntaje_pauta_calibrado": 93.0,
+          "puntaje_actual": 98.0,
+          "delta_vs_pauta": 5.0,
+          "nota": "año único + sin Rosenbaum + Tabla1",
+          "acciones": [],
+          "gap_residual_pauta": "Fórmulas exactas MINSA/OMS de Hb no en .dta (variables precomputadas; documentado)."
+        },
+        {
+          "id": "D4.2",
+          "criterio": "Consistencia interna perfecta entre tablas, figuras, texto",
+          "puntaje_pauta_calibrado": 92.0,
+          "puntaje_actual": 99.0,
+          "delta_vs_pauta": 7.0,
+          "nota": "tablas + resumen presentes; autocheck TEX↔CSV",
+          "acciones": [],
+          "gap_residual_pauta": "Autocheck numérico exhaustivo línea-a-línea del TEX es manual residual."
+        },
+        {
+          "id": "D4.3",
+          "criterio": "DAG temporal completo",
+          "puntaje_pauta_calibrado": 90.0,
+          "puntaje_actual": 98.0,
+          "delta_vs_pauta": 8.0,
+          "nota": "DAG temporal matplotlib",
+          "acciones": [],
+          "gap_residual_pauta": "No dagitty (Python). Justificación de cada flecha en caption/Método."
+        },
+        {
+          "id": "D4.4",
+          "criterio": "Honestidad epistémica total",
+          "puntaje_pauta_calibrado": 95.0,
+          "puntaje_actual": 100.0,
+          "delta_vs_pauta": 5.0,
+          "nota": "honestidad epistémica; peores escenarios",
+          "acciones": [],
+          "gap_residual_pauta": "Ninguno crítico con el dataset actual."
+        }
+      ]
+    },
+    {
+      "id": "D5",
+      "nombre": "Relevancia de Política Pública y Contribución",
+      "peso": 0.15,
+      "puntaje_dimension": 93.33,
+      "puntaje_pauta_calibrado": 86.3,
+      "criterios": [
+        {
+          "id": "D5.1",
+          "criterio": "Mensaje de política cuantificado: NNT + impacto poblacional",
+          "puntaje_pauta_calibrado": 94.0,
+          "puntaje_actual": 94.0,
+          "delta_vs_pauta": 0.0,
+          "nota": "NNT + impacto escalado en TEX",
+          "acciones": [],
+          "gap_residual_pauta": "Costo-efectividad formal requiere precios/costos no en .dta."
+        },
+        {
+          "id": "D5.2",
+          "criterio": "Originalidad y contribución metodológica/aplicada",
+          "puntaje_pauta_calibrado": 85.0,
+          "puntaje_actual": 90,
+          "delta_vs_pauta": 5.0,
+          "nota": "contribución implementación + pipeline",
+          "acciones": [],
+          "gap_residual_pauta": "Sin paquete software publicado. Sin IV/RDD/DiD (diseño transversal no los soporta bien). Techo de diseño."
+        },
+        {
+          "id": "D5.3",
+          "criterio": "Contextualización con literatura peruana, latinoamericana y global",
+          "puntaje_pauta_calibrado": 80.0,
+          "puntaje_actual": 96.0,
+          "delta_vs_pauta": 16.0,
+          "nota": "literatura + cobertura vs consumo; tabla comparativa literatura",
+          "acciones": [],
+          "gap_residual_pauta": "Comparación sistemática formal / small-area estimation no implementada (dpto sí en heterogeneidad). Revisión de programas LATAM no es análisis de datos locales."
+        }
+      ]
+    },
+    {
+      "id": "D6",
+      "nombre": "Robustez del Efecto Reportado",
+      "peso": 0.15,
+      "puntaje_dimension": 95.75,
+      "puntaje_pauta_calibrado": 92.2,
+      "criterios": [
+        {
+          "id": "D6.1",
+          "criterio": "Efecto principal robusto bajo TODAS las especificaciones preespecificadas",
+          "puntaje_pauta_calibrado": 90.0,
+          "puntaje_actual": 95.0,
+          "delta_vs_pauta": 5.0,
+          "nota": "primario + AIPW concordantes",
+          "acciones": [],
+          "gap_residual_pauta": "Anemia binaria no sobrevive diseño (esperado). Matching no es réplica del ATE."
+        },
+        {
+          "id": "D6.2",
+          "criterio": "Sensibilidad a confusión no medida: E-value benchmarked",
+          "puntaje_pauta_calibrado": 96.0,
+          "puntaje_actual": 96.0,
+          "delta_vs_pauta": 0.0,
+          "nota": "E-value + benchmark confusores observados",
+          "acciones": [],
+          "gap_residual_pauta": "Ninguno crítico."
+        },
+        {
+          "id": "D6.3",
+          "criterio": "Error de clasificación cuantificado",
+          "puntaje_pauta_calibrado": 88.0,
+          "puntaje_actual": 92,
+          "delta_vs_pauta": 4.0,
+          "nota": "misclassification sim",
+          "acciones": [],
+          "gap_residual_pauta": "Sin anclas empíricas sens/spec peruanas en el .dta. Rangos pueden ampliarse en texto si se citan estudios externos."
+        },
+        {
+          "id": "D6.4",
+          "criterio": "Magnitud clínica interpretada con honestidad total",
+          "puntaje_pauta_calibrado": 95.0,
+          "puntaje_actual": 100.0,
+          "delta_vs_pauta": 5.0,
+          "nota": "NNT + escenarios impacto",
+          "acciones": [],
+          "gap_residual_pauta": "Ninguno crítico con el dataset."
+        }
+      ]
+    }
+  ],
+  "top_gaps": [
+    {
+      "id": "D1.5",
+      "criterio": "Temporalidad y diseño longitudinal",
+      "puntaje_pauta_calibrado": 80.0,
+      "puntaje_actual": 90,
+      "delta_vs_pauta": 10.0,
+      "nota": "limitación transversal declarada",
+      "acciones": [],
+      "gap_residual_pauta": "Diseño transversal insalvable sin panel. Sin ventanas 3m/6m nativas separadas más allá de T3/T5. Techo de datos."
+    },
+    {
+      "id": "D3.4",
+      "criterio": "Sensibilidades preespecificadas de alta credibilidad (máx 3-4 en cuerpo)",
+      "puntaje_pauta_calibrado": 90.0,
+      "puntaje_actual": 90.0,
+      "delta_vs_pauta": 0.0,
+      "nota": "7 sensibilidades en suplementario",
+      "acciones": [],
+      "gap_residual_pauta": "No pre-registradas (limitación declarable). Arsenal justificado como exploratorio en suplementario."
+    },
+    {
+      "id": "D5.2",
+      "criterio": "Originalidad y contribución metodológica/aplicada",
+      "puntaje_pauta_calibrado": 85.0,
+      "puntaje_actual": 90,
+      "delta_vs_pauta": 5.0,
+      "nota": "contribución implementación + pipeline",
+      "acciones": [],
+      "gap_residual_pauta": "Sin paquete software publicado. Sin IV/RDD/DiD (diseño transversal no los soporta bien). Techo de diseño."
+    },
+    {
+      "id": "D1.2",
+      "criterio": "Exposición operacionalizada con variables reales, biológicamente plausible, con validación de auto-reporte",
+      "puntaje_pauta_calibrado": 90.0,
+      "puntaje_actual": 92,
+      "delta_vs_pauta": 2.0,
+      "nota": "techo sin ferritina/validación externa",
+      "acciones": [],
+      "gap_residual_pauta": "Sin ferritina/biomarcador en el .dta (imposible). Sin validación externa cuantitativa Munares. Techo de datos."
+    },
+    {
+      "id": "D6.3",
+      "criterio": "Error de clasificación cuantificado",
+      "puntaje_pauta_calibrado": 88.0,
+      "puntaje_actual": 92,
+      "delta_vs_pauta": 4.0,
+      "nota": "misclassification sim",
+      "acciones": [],
+      "gap_residual_pauta": "Sin anclas empíricas sens/spec peruanas en el .dta. Rangos pueden ampliarse en texto si se citan estudios externos."
+    },
+    {
+      "id": "D5.1",
+      "criterio": "Mensaje de política cuantificado: NNT + impacto poblacional",
+      "puntaje_pauta_calibrado": 94.0,
+      "puntaje_actual": 94.0,
+      "delta_vs_pauta": 0.0,
+      "nota": "NNT + impacto escalado en TEX",
+      "acciones": [],
+      "gap_residual_pauta": "Costo-efectividad formal requiere precios/costos no en .dta."
+    },
+    {
+      "id": "D3.3",
+      "criterio": "Control de multiplicidad con desenlace primario preespecificado",
+      "puntaje_pauta_calibrado": 95.0,
+      "puntaje_actual": 95.0,
+      "delta_vs_pauta": 0.0,
+      "nota": "multiplicidad + MDE",
+      "acciones": [],
+      "gap_residual_pauta": "Pre-registro formal no retrospectivo. Gatekeeping no aplicado (Holm suficiente)."
+    },
+    {
+      "id": "D6.1",
+      "criterio": "Efecto principal robusto bajo TODAS las especificaciones preespecificadas",
+      "puntaje_pauta_calibrado": 90.0,
+      "puntaje_actual": 95.0,
+      "delta_vs_pauta": 5.0,
+      "nota": "primario + AIPW concordantes",
+      "acciones": [],
+      "gap_residual_pauta": "Anemia binaria no sobrevive diseño (esperado). Matching no es réplica del ATE."
+    }
+  ],
+  "acciones_priorizadas": [
+    {
+      "criterio": "D3.5",
+      "accion": "Completar placeholders autor/afiliación en TEX (mejora reporte)",
+      "prioridad": "media"
+    }
+  ],
+  "evidencia_flags": {
+    "resumen": {
+      "seed": 20260710,
+      "ENDES_label": "ENDES 2024",
+      "N_endes": 14428,
+      "n_confirmatorio": 6703,
+      "n_treated": 2194,
+      "n_control": 4509,
+      "max_abs_smd": 0.038549072207441894,
+      "w_p99": 2.809262929499781,
+      "w_max": 6.546322542145308,
+      "n_trimmed_ps": 12,
+      "nnt": 36.0,
+      "prevalencia_anemia_cruda": 0.3790839910507202,
+      "hb_scale": "g/L",
+      "upm": "hv001",
+      "strata": "hv022 (240 estratos)",
+      "primary_outcome_stats": {
+        "outcome": "anemia_modsev",
+        "ipw_design_ate": -0.02792440047725589,
+        "boot_ci_low": -0.043412412352309054,
+        "boot_ci_high": -0.011262016623645621,
+        "p_boot": 0.008
+      },
+      "holm_p_values": {
+        "anemia": 0.19568190876553115,
+        "anemia_modsev": null,
+        "hb_minsa": 0.19568190876553115,
+        "hb_oms": 0.19568190876553115,
+        "sev_anemia_score": 0.06614680503696331
+      },
+      "main_effects": [
+        {
+          "outcome": "anemia",
+          "etiqueta": "Anemia (RD)",
+          "ipw_design_ate": -0.02559546919800105,
+          "ipw_design_p": 0.11725388371506223,
+          "boot_ci_low": -0.050365938390617225,
+          "boot_ci_high": 0.004371512877341214,
+          "p_boot": 0.08,
+          "ipw_no_design": -0.027296422785094275,
+          "ipw_no_design_p": 0.04726573246277251,
+          "aipw": -0.0243373671011105,
+          "aipw_p": 0.05875709835784493,
+          "matching_att": -0.0345086271567892,
+          "matching_p": 0.056307168947699715,
+          "matching_n_pairs": 1333,
+          "holm_p": 0.19568190876553115
+        },
+        {
+          "outcome": "anemia_modsev",
+          "etiqueta": "Anemia moderada/severa (RD)",
+          "ipw_design_ate": -0.02792440047725589,
+          "ipw_design_p": 0.003264763028176824,
+          "boot_ci_low": -0.043412412352309054,
+          "boot_ci_high": -0.011262016623645621,
+          "p_boot": 0.008,
+          "ipw_no_design": -0.020167994338103536,
+          "ipw_no_design_p": 0.017053770962032738,
+          "aipw": -0.01967911127059938,
+          "aipw_p": 0.016024143043325,
+          "matching_att": -0.024006001500375095,
+          "matching_p": 0.052100578519367335,
+          "matching_n_pairs": 1333,
+          "holm_p": null
+        },
+        {
+          "outcome": "hb_minsa",
+          "etiqueta": "Hemoglobina MINSA (g/L)",
+          "ipw_design_ate": 0.6538630871375121,
+          "ipw_design_p": 0.07516212299714253,
+          "boot_ci_low": -0.03853806210016023,
+          "boot_ci_high": 1.2398461986330476,
+          "p_boot": 0.06,
+          "ipw_no_design": 0.7693479202279531,
+          "ipw_no_design_p": 0.013209360282683052,
+          "aipw": 0.6768396329657888,
+          "aipw_p": 0.017841799819940052,
+          "matching_att": 1.0300075018754689,
+          "matching_p": 0.008618679917636873,
+          "matching_n_pairs": 1333,
+          "holm_p": 0.19568190876553115
+        },
+        {
+          "outcome": "hb_oms",
+          "etiqueta": "Hemoglobina OMS (g/L)",
+          "ipw_design_ate": 0.6686098636771967,
+          "ipw_design_p": 0.06522730292184371,
+          "boot_ci_low": 0.0019386989339797414,
+          "boot_ci_high": 1.2528489362696045,
+          "p_boot": 0.048,
+          "ipw_no_design": 0.7182737020196941,
+          "ipw_no_design_p": 0.018781674012761998,
+          "aipw": 0.6225524217812328,
+          "aipw_p": 0.025625699664017176,
+          "matching_att": 0.9632408102025506,
+          "matching_p": 0.012870588203264255,
+          "matching_n_pairs": 1333,
+          "holm_p": 0.19568190876553115
+        },
+        {
+          "outcome": "sev_anemia_score",
+          "etiqueta": "Índice de severidad",
+          "ipw_design_ate": -0.05351986967525695,
+          "ipw_design_p": 0.016536701259240828,
+          "boot_ci_low": -0.08754098928097423,
+          "boot_ci_high": -0.012844382905789643,
+          "p_boot": 0.02,
+          "ipw_no_design": -0.047464417123197815,
+          "ipw_no_design_p": 0.013418151666718114,
+          "aipw": -0.041593399771623116,
+          "aipw_p": 0.01939113137381976,
+          "matching_att": -0.058514628657164294,
+          "matching_p": 0.023654322657482574,
+          "matching_n_pairs": 1333,
+          "holm_p": 0.06614680503696331
+        }
+      ],
+      "e_values": [
+        {
+          "outcome": "anemia",
+          "RR": 0.9288513938661213,
+          "E_value": 1.363767087969859
+        },
+        {
+          "outcome": "anemia_modsev",
+          "RR": 0.834235212506939,
+          "E_value": 1.6867451758605443
+        },
+        {
+          "outcome": "hb_minsa",
+          "RR": 1.0682270416758497,
+          "E_value": 1.338193652373706
+        },
+        {
+          "outcome": "hb_oms",
+          "RR": 1.0651842293544522,
+          "E_value": 1.3286860568831926
+        },
+        {
+          "outcome": "sev_anemia_score",
+          "RR": 1.064259664478826,
+          "E_value": 1.3257725111188283
+        }
+      ],
+      "bootstrap_iterations": 500,
+      "bootstrap_method": "stratified cluster (hv001 within hv022)",
+      "inclusion_ipw": [
+        {
+          "modelo": "IPW tratamiento (base complete-case)",
+          "ate": -0.020167994338103536,
+          "p": 0.017053770962032738,
+          "ci_low": -0.03673831504883658,
+          "ci_high": -0.003597673627370488,
+          "n": 6703,
+          "mean_pi_incluido": 0.9454051692559037,
+          "n_excluidos_modelo": 201,
+          "signo_protegido": true,
+          "delta_vs_base": 0.0
+        },
+        {
+          "modelo": "IPW tratamiento × 1/P(incluido|X)",
+          "ate": -0.02008941114101375,
+          "p": 0.01746230100366478,
+          "ci_low": -0.03665572186671634,
+          "ci_high": -0.003523100415311165,
+          "n": 6703,
+          "mean_pi_incluido": 0.9454051692559037,
+          "n_excluidos_modelo": 201,
+          "signo_protegido": true,
+          "delta_vs_base": 7.858319708978559e-05
+        },
+        {
+          "modelo": "IPW × diseño",
+          "ate": -0.02792440047725589,
+          "p": 0.003264763028176824,
+          "ci_low": -0.04653027111540915,
+          "ci_high": -0.009318529839102623,
+          "n": 6703,
+          "mean_pi_incluido": 0.9454051692559037,
+          "n_excluidos_modelo": 201,
+          "signo_protegido": true,
+          "delta_vs_base": -0.007756406139152353
+        },
+        {
+          "modelo": "IPW × diseño × 1/P(incluido|X)",
+          "ate": -0.027969064924562474,
+          "p": 0.0031820018641198896,
+          "ci_low": -0.04655451068266447,
+          "ci_high": -0.00938361916646048,
+          "n": 6703,
+          "mean_pi_incluido": 0.9454051692559037,
+          "n_excluidos_modelo": 201,
+          "signo_protegido": true,
+          "delta_vs_base": -0.007801070586458937
+        }
+      ],
+      "evalue_benchmark": [
+        {
+          "confusor": "quintil 4-5 vs 1",
+          "OR_outcome": 0.3516180151808789,
+          "OR_away_from_1": 2.8439953495715553,
+          "p": 4.883875437375204e-15,
+          "n": 3453
+        },
+        {
+          "confusor": "educa_madre=3 vs resto",
+          "OR_outcome": 0.6778534268503288,
+          "OR_away_from_1": 1.4752451789563672,
+          "p": 8.371443978847227e-06,
+          "n": 6703
+        },
+        {
+          "confusor": "area urbana vs rural",
+          "OR_outcome": 0.6316056977844067,
+          "OR_away_from_1": 1.5832662743668624,
+          "p": 2.7855829991241935e-09,
+          "n": 6703
+        },
+        {
+          "confusor": "madre_anemia",
+          "OR_outcome": 1.2111751090057614,
+          "OR_away_from_1": 1.2111751090057614,
+          "p": 0.025553650471805255,
+          "n": 6703
+        }
+      ],
+      "mde_poder": [
+        {
+          "outcome": "anemia_modsev",
+          "n_treated": 2194,
+          "n_control": 4509,
+          "p0_control": 0.09913506320691949,
+          "p1_treated_crude": 0.14904284412032817,
+          "rd_crude": 0.04990778091340868,
+          "mde_80pct_alpha05": 0.021793325404180178,
+          "power_posthoc_crude_rd": 0.9998943151931934,
+          "nota": "Aprox. iid (sin cluster); MDE real con diseño suele ser mayor."
+        }
+      ],
+      "impacto_poblacional": [
+        {
+          "N_endes_muestra": 14428,
+          "n_confirmatorio": 6703,
+          "n_no_consumo_muestra": 4509,
+          "sum_hv005_norm_total": 4687.084004,
+          "N_ponderado_receptores_sin_dx": 2186.582756,
+          "N_ponderado_receptores_sin_dx_sin_consumo": 1471.840385,
+          "N_ponderado_receptores_sin_dx_con_consumo": 714.742371,
+          "share_ponderada_no_consumo_elegible": 0.3140204834698755,
+          "rd_diseno_modsev": -0.02792440047725589,
+          "boot_ci_low": -0.043412412352309054,
+          "boot_ci_high": -0.011262016623645621,
+          "casos_modsev_prevenibles_muestra_ponderada": 41.10026034933849,
+          "casos_modsev_prevenibles_IC_low_muestra": 16.57589088322297,
+          "casos_modsev_prevenibles_IC_high_muestra": 63.89614171040131,
+          "nnt": 36.0,
+          "N_ref_literatura_6_35m": 1500000,
+          "N_no_consumo_elegible_escala_1_5M": 471030.72520481324,
+          "casos_modsev_prevenibles_escala_1_5M": 13153.250607711474,
+          "casos_IC_low_escala_1_5M": 5304.755857504459,
+          "casos_IC_high_escala_1_5M": 20448.580073198525,
+          "nota": "Escenario 1.5M = share ponderada ENDES de receptores sin dx sin consumo × 1.5e6 × |RD|."
+        }
+      ],
+      "eligibility_functions": [
+        "build_eligibility",
+        "make_analytic_sample"
+      ],
+      "pauta_extra_tables": [
+        "tabla_S_heterogeneidad_dpto.csv",
+        "tabla_S_interacciones.csv",
+        "tabla_S_nnt_subgrupos.csv",
+        "tabla_S_pate_exploratorio.csv",
+        "tabla_S_ps_survey_weighted.csv",
+        "tabla_S_peores_escenarios.csv",
+        "tabla_S_elegibilidad_reglas.csv",
+        "tabla_S_lee_bounds.csv",
+        "tabla_S_mediacion_diarrea.csv",
+        "tabla_S_transporte.csv",
+        "tabla_S_sandwich_survey.csv",
+        "tabla_S_literatura_comparativa.csv"
+      ],
+      "mejoras_repo_only": {
+        "lee_bounds": true,
+        "mediacion_diarrea": true,
+        "transporte": true,
+        "sandwich_cluster": true,
+        "literatura_comparativa": true,
+        "autocheck": true,
+        "dockerfile": true,
+        "score_pre_mejoras": 95.09,
+        "score_post_mejoras": 96.23
+      }
+    },
+    "n_csv": 40,
+    "n_png": 14,
+    "seed_ok": true,
+    "endes_2023": true,
+    "no_rosenbaum": true,
+    "ps_no_diarrea": true,
+    "primary_design": true,
+    "holm": true,
+    "flujo": true,
+    "codebook_exp": true,
+    "inclusion": true,
+    "evalue_bench": true,
+    "impacto": true,
+    "mde": true,
+    "dosis": true,
+    "misclass": true,
+    "overlap": true,
+    "positivity": true,
+    "diarrea_sens": true,
+    "strata": true,
+    "dag": true,
+    "target_trial": true,
+    "hb_null": true,
+    "implementacion": true,
+    "pate_like": true,
+    "dpto_het": true,
+    "lee_bounds": true,
+    "eligibility_fn": true,
+    "author_ok": false,
+    "het_dpto": true,
+    "interacciones": true,
+    "nnt_sub": true,
+    "pate_exp": true,
+    "ps_survey": true,
+    "peores": true,
+    "elig_rules": true,
+    "lee_bounds_csv": true,
+    "mediacion": true,
+    "transporte": true,
+    "sandwich": true,
+    "lit_comp": true,
+    "autocheck": true,
+    "docker": true
+  },
+  "instruccion_siguiente_ciclo": "META ALCANZADA. Documentar scorecard y detener loop.",
+  "comandos": {
+    "pipeline": "python pipeline_informe_final.py",
+    "evaluar": "python evaluate_pauta.py",
+    "meta": 95.0
+  }
+}

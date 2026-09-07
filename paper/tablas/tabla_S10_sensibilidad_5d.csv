@@ -1,0 +1,6 @@
+Dimension,Descripcion,DAG,Estado,RD,Delta_RD,Evalue,Score,Pasa
+S1: Collider bias,Sin filtrar dx_anemia==0,DAG-B,Screening flag,0.0002,+0.0281,1.04,0.0,No
+S2: Confusion departamental,Ajuste por dpto como proxy de calidad,DAG-C,Robusto,-0.0181,N/A,1.67,1.0,Si
+S3: Bounding factor 2U,Dos confusores no observados simultaneos,DAG-D,Informativo,N/A,N/A,1.93,0.67,Si
+S4: Error de medicion,Consumo 7d (T3) vs reporte 12m (T5),DAG-A,Robusto,-0.0185,N/A,1.68,1.0,Si
+S5: Mediacion diarrea,Proporcion mediada via diarrea (PM=26%),DAG-A,Informativo,N/A,N/A,N/A,0.60,Parcial

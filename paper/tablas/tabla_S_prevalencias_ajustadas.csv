@@ -1,0 +1,2 @@
+outcome,prev_cruda_consumo,prev_cruda_sin_consumo,prev_ajustada_consumo,prev_ajustada_sin_consumo,diferencia_prevalencias,n,n_consumo,n_sin_consumo,nota
+anemia_modsev,0.14904284412032817,0.09913506320691949,0.09293244273572975,0.12085684321298557,-0.027924400477255855,6703,2194,4509,Medias ponderadas IPTW estabilizada x peso de diseño. Mismo punto que el primario; no reestima bootstrap.

@@ -1,0 +1,7 @@
+fuente,tipo,exposicion,desenlace,magnitud,mensaje
+"Este estudio (ENDES 2024, IPW×diseño)",observacional causal / implementación,Consumo reportado T5≥1 entre receptores sin dx,Anemia mod/sev (RD),RD≈−0.028; NNT≈36; E-value 1.69,Brecha entrega→consumo; no eficacia farmacológica
+ENDES 2024 / INEI (prevalencia),encuesta nacional,—,Anemia 6–35 m,≈36.6% prevalencia,Carga alta; justifica evaluación programática
+WHO iron supplementation guidelines,guía / síntesis,Suplementación con hierro en lactantes/niños,Anemia / Hb,Eficacia esperable con adherencia supervisada,Benchmark de eficacia ≠ implementación en campo
+Low et al. / Neuberger et al. (síntesis RCTs hierro),revisión / meta-análisis (citados),Hierro en ensayos,Hb / anemia,Efectos Hb típicamente > error HemoCue con adherencia,Contraste: aquí Hb +0.07 g/dL clínicamente nula
+"Munares et al. (programa Perú, cit.)",evaluación nacional / implementación,Cobertura y prácticas de suplementación,Proceso / cobertura,Énfasis en entrega; validación de auto-reporte limitada,Ancla de error de clasificación y brecha de proceso
+MINSA normas de suplementación,normativa,Gotas / jarabe / MNP,Indicadores de programa,Indicadores históricos centrados en entrega,Política: migrar a consumo + resultado hematológico

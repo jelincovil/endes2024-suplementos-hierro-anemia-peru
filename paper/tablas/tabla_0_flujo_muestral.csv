@@ -1,0 +1,7 @@
+paso,descripcion,n,n_excluido,n_retenido
+1,ENDES total,14428,0.0,14428.0
+2,Recibió suplemento (received_any=1),9079,5349.0,9079.0
+3,Sin diagnóstico previo de anemia (dx_anemia=0),6908,2171.0,6908.0
+4,Casos completos en covariables,6703,205.0,6703.0
+—,  Tratados (T5>=1),2194,,
+—,  Control (T5=0),4509,,

@@ -1,0 +1,4 @@
+muestra,n,n_t,ipw_ate,ipw_p,nota
+todos_complete_case (PATE-like),13971,3664,-0.0009424843563745958,0.8824115510689757,exploratorio; posible colisionador/selección
+no_receptores,5171,554,0.008134496523002445,0.5208043770136775,exploratorio
+receptores_con_dx_previo,2097,916,0.001614556772965499,0.9381625406054734,sensibilidad; dx endógeno

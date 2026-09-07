@@ -1,0 +1,2 @@
+metodo,outcome,p_S_treated,p_S_control,trim_frac,keep_frac,trimmed_arm,rd_selected_raw,lee_bound_low,lee_bound_high,interval_covers_zero,n_treated_obs,n_control_obs,nota
+Lee_2009_selection,anemia_modsev,0.9790272199910754,0.9661452753374759,0.013157902446999437,0.9868420975530006,tratados,0.04990778091340868,0.03850927859446619,0.05190419776305742,False,2194,4509,Cotas bajo monotonía de selección; RD crudo en seleccionados (no IPW).

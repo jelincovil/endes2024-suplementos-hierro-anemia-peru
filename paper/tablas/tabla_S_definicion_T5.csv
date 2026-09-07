@@ -1,0 +1,13 @@
+variable,ventana,contenido,rol,faltantes
+rec12m_jar / s465db_a,12 meses,Recibió del MINSA hierro en jarabe para prevenir anemia,Recepción (elegibilidad / received_any),19
+rec12m_got / s465db_b,12 meses,Recibió del MINSA hierro en gotas,Recepción (elegibilidad),19
+rec12m_pol / s465db_c,12 meses,Recibió del MINSA micronutrientes en polvo,Recepción (elegibilidad),19
+rec12m_otr / s465db_d,12 meses,Recibió del MINSA otra presentación de hierro,Recepción (elegibilidad),24
+toma7d_jar / s465ea,7 días,Tomó hierro en jarabe,Exposición del artículo (componente),18
+toma7d_got / s465ec,7 días,Tomó hierro en gotas,Exposición del artículo (componente),22
+toma7d_pol / s465eb,7 días,Tomó hierro en polvo (micronutrientes),Exposición del artículo (componente),20
+toma7d_otr / s465ed,7 días,Tomó hierro en otra presentación,Exposición del artículo (componente),18
+exposicion_7d,7 días,"1 si al menos una de toma7d_jar/got/pol/otr = 1; 0 si las cuatro son 0. No es dosis ni adherencia. Coincide con T5>=1 en la muestra analítica.",Exposición binaria del cuerpo,2 en n=6703
+T5,índice mixto,"Índice 0–5 del microdato. 1–4 = número de tipos consumidos; 5 = alta intensidad. El artículo no usa el valor 5 ni el índice ordinal: solo la dicotomía T5>=1, equivalente a exposicion_7d.",Histórico del pipeline / no se interpreta,0
+qtoma12m_*,12 meses,Cantidad consumida por presentación en 12 meses,Exposición alternativa de sensibilidad,0
+dx_anemia / qi465ed_cc_b,no fechada,Le diagnosticaron o le dijeron que tenía anemia (autorreporte),Restricción de la muestra principal,0

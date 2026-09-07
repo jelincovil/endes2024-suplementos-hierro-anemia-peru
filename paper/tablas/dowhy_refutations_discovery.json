@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-08-08T19:29:21.078962+00:00",
+  "seed": 20260805,
+  "baseline": {
+    "rd": -0.027982641137692506,
+    "ci_low": -0.04659225450443187,
+    "ci_high": -0.00937302777095314,
+    "p_value": 0.0032068110583052764,
+    "n": 6703,
+    "n_treated": 2194
+  },
+  "refutations": {
+    "random_common_cause": {
+      "method": "random_common_cause",
+      "n_trials": 20,
+      "mean_rd": -0.027950130108334116,
+      "std_rd": 0.00020255868348946902,
+      "min_rd": -0.028345749017900133,
+      "max_rd": -0.027336826980313308,
+      "stable": true
+    },
+    "placebo_treatment": {
+      "method": "placebo_treatment",
+      "rd": -0.0030530324762878696,
+      "ci_low": -0.02140324260363874,
+      "ci_high": 0.015297177651062999,
+      "p_value": 0.7443511653930872,
+      "null_rejected": false,
+      "passes": true
+    },
+    "data_subset": {
+      "method": "data_subset_80pct",
+      "n_trials": 100,
+      "mean_rd": -0.027412721427752296,
+      "ci_2_5": -0.035205811585432366,
+      "ci_97_5": -0.016737776487654177,
+      "sign_stable": true
+    }
+  }
+}
