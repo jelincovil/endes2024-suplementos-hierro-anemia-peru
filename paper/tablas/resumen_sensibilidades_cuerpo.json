@@ -20,10 +20,10 @@
       "boot_ci_high": -0.011683413032260897,
       "boot_n": 2000,
       "inferencia": "bootstrap percentil",
-      "n_faltantes_toma_pop": null,
-      "delta_vs_principal": null,
-      "n_excluidos_modelo": null,
-      "mean_pi_incluido": null
+      "n_faltantes_toma_pop": NaN,
+      "delta_vs_principal": NaN,
+      "n_excluidos_modelo": NaN,
+      "mean_pi_incluido": NaN
     },
     {
       "spec_id": "departamental",
@@ -41,10 +41,10 @@
       "boot_ci_high": -0.006753264480506681,
       "boot_n": 2000,
       "inferencia": "bootstrap percentil",
-      "n_faltantes_toma_pop": null,
-      "delta_vs_principal": null,
-      "n_excluidos_modelo": null,
-      "mean_pi_incluido": null
+      "n_faltantes_toma_pop": NaN,
+      "delta_vs_principal": NaN,
+      "n_excluidos_modelo": NaN,
+      "mean_pi_incluido": NaN
     },
     {
       "spec_id": "sin_restriccion",
@@ -62,10 +62,10 @@
       "boot_ci_high": 0.009472184571032985,
       "boot_n": 2000,
       "inferencia": "bootstrap percentil",
-      "n_faltantes_toma_pop": null,
-      "delta_vs_principal": null,
-      "n_excluidos_modelo": null,
-      "mean_pi_incluido": null
+      "n_faltantes_toma_pop": NaN,
+      "delta_vs_principal": NaN,
+      "n_excluidos_modelo": NaN,
+      "mean_pi_incluido": NaN
     },
     {
       "spec_id": "consumo_12m",
@@ -83,10 +83,10 @@
       "boot_ci_high": 0.04713605981838222,
       "boot_n": 2000,
       "inferencia": "bootstrap percentil",
-      "n_faltantes_toma_pop": null,
-      "delta_vs_principal": null,
-      "n_excluidos_modelo": null,
-      "mean_pi_incluido": null
+      "n_faltantes_toma_pop": NaN,
+      "delta_vs_principal": NaN,
+      "n_excluidos_modelo": NaN,
+      "mean_pi_incluido": NaN
     },
     {
       "spec_id": "faltantes_missing",
@@ -100,14 +100,14 @@
       "hc3_ci_low": -0.04655192481193551,
       "hc3_ci_high": -0.009333960677037182,
       "hc3_p": 0.0032493933925432884,
-      "boot_ci_low": null,
-      "boot_ci_high": null,
+      "boot_ci_low": NaN,
+      "boot_ci_high": NaN,
       "boot_n": 0,
       "inferencia": "HC3",
       "n_faltantes_toma_pop": 2.0,
       "delta_vs_principal": -1.854226723049454e-05,
-      "n_excluidos_modelo": null,
-      "mean_pi_incluido": null
+      "n_excluidos_modelo": NaN,
+      "mean_pi_incluido": NaN
     },
     {
       "spec_id": "inclusion_ipw",
@@ -121,12 +121,12 @@
       "hc3_ci_low": -0.04655451068266438,
       "hc3_ci_high": -0.009383619166460456,
       "hc3_p": 0.0031820018641199026,
-      "boot_ci_low": null,
-      "boot_ci_high": null,
+      "boot_ci_low": NaN,
+      "boot_ci_high": NaN,
       "boot_n": 0,
       "inferencia": "HC3",
-      "n_faltantes_toma_pop": null,
-      "delta_vs_principal": null,
+      "n_faltantes_toma_pop": NaN,
+      "delta_vs_principal": NaN,
       "n_excluidos_modelo": 201.0,
       "mean_pi_incluido": 0.9454051692559037
     }

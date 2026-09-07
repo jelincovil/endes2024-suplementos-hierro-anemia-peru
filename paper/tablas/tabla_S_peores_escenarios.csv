@@ -1,6 +1,6 @@
 escenario,RD_modsev,implicacion,recomendacion_condicional
-Estimación puntual (IPW×diseño),-0.02792440047725589,NNT≈36.0; efecto protector modesto de implementación,"Priorizar indicadores de consumo reportado, no solo entrega"
-Límite inferior del IC bootstrap (efecto más débil),-0.011262016623645621,"Si el efecto real está en el borde del IC, magnitud poblacional cae ~60%",No escalar políticas solo con el punto; usar rango del IC
-Límite superior del IC (efecto más fuerte),-0.043412412352309054,Mejor caso bajo incertidumbre muestral; sigue siendo <3–5 pp,"Aun en mejor caso, no sustituye RCTs de eficacia con adherencia controlada"
+Estimación puntual (IPW×diseño),-0.027924400477255855,NNT≈36.0; efecto protector modesto de implementación,"Priorizar indicadores de consumo reportado, no solo entrega"
+Límite inferior del IC bootstrap (efecto más débil),-0.011262016623645926,"Si el efecto real está en el borde del IC, magnitud poblacional cae ~60%",No escalar políticas solo con el punto; usar rango del IC
+Límite superior del IC (efecto más fuerte),-0.043412412352308985,Mejor caso bajo incertidumbre muestral; sigue siendo <3–5 pp,"Aun en mejor caso, no sustituye RCTs de eficacia con adherencia controlada"
 Confusor no medido con RR≥E-value (1.69),0.0,"El efecto puntual podría anularse (dieta, parasitosis, literacidad en salud)",Triangular con indicadores de dieta/parasitosis en futuras ENDES
 Mala clasificación no diferencial de exposición,,Sesgo hacia el nulo; el RD observado es cota inferior de adherencia real,"Invertir en medición de consumo (registros, sachet count) no solo auto-reporte"
