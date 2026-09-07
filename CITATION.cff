@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: >-
+  Si utiliza este repositorio o sus resultados, cite el manuscrito sometido
+  y este material de reproducción.
+title: >-
+  endes2024-suplementos-hierro-anemia-peru — Material de reproducción de la
+  asociación entre consumo reportado de suplementos con hierro y anemia
+  moderada o severa en niños: ENDES 2024, Perú
+type: dataset
+authors:
+  - name: Lincovil Curivil, Jaime Enrique
+    website: https://github.com/jelincovil
+description: >-
+  Repositorio de investigación reproducible que acompaña el manuscrito
+  sometido a evaluación por pares. Contiene el pipeline completo (Python),
+  los microdatos ENDES 2024 procesados (sin identificadores), las tablas
+  CSV/JSON y las figuras publicables. Estudio observacional transversal:
+  los resultados describen una asociación y no indican causalidad.
+  Resultado principal: IPW × peso de diseño, RD = −2,8 pp (IC 95 % [−4,5; −1,2]),
+  muestra analítica n = 6 703.
+keywords:
+  - anemia infantil
+  - suplementos de hierro
+  - ENDES 2024
+  - Perú
+  - inferencia causal
+  - IPW
+  - reproducibilidad
+license: CC-BY-4.0
+version: 1.0.0
+date-released: "2026-09-07"
+references:
+  - type: article
+    title: >-
+      Asociación entre consumo reportado de suplementos con hierro y anemia
+      moderada o severa en niños que recibieron suplementos: ENDES 2024, Perú
+    status: submitted

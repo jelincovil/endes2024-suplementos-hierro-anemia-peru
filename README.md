@@ -65,6 +65,7 @@ Muestra analítica: **6 703 niños** (2 194 con consumo reportado en 7 días y
 | `paper/STROBE_checklist_ENDES_2024.md` | Checklist STROBE del estudio. |
 | `run_all.sh` | Orquestador del pipeline completo. |
 | `requirements.txt`, `requirements-lock.txt` | Dependencias (libres y congeladas, respectivamente). |
+| `CITATION.cff` | Ficha de citación formal del material de reproducción (formato CFF). |
 
 ## Requisitos para ejecutar el pipeline
 
@@ -73,9 +74,18 @@ Muestra analítica: **6 703 niños** (2 194 con consumo reportado en 7 días y
   - `statsmodels >= 0.14` · `scikit-learn >= 1.2` · `matplotlib >= 3.7`
   - `pyreadstat >= 1.2` (lectura del `.dta`)
 - Los números exactos con los que se estimó el artículo están congelados en
-  `requirements-lock.txt`. Si quiere reproducibilidad bit a bit, instale con el
-  lock; si solo quiere re-ejecutar con versiones más nuevas, use
-  `requirements.txt` y compare contra las tablas de referencia.
+  `requirements-lock.txt` (Python 3.11.15; pandas 3.0.5, scikit-learn 1.9.0,
+  statsmodels 0.14.6, pyreadstat 1.3.5, entre otras). Ese lock **es el registro
+  archivado del entorno de desarrollo original**: si crea un entorno con el
+  lock (p. ej. conda o pip directamente desde el archivo), obtendrá el mismo
+  software con el que se produjo cada cifra del manuscrito.
+- Instalación del entorno archivado:
+  ```bash
+  python3.11 -m venv .venv && source .venv/bin/activate
+  pip install -r requirements-lock.txt
+  ```
+  Si solo quiere re-ejecutar con versiones más nuevas, use `requirements.txt`
+  y compare contra las tablas de referencia.
 
 ### Instalación
 
@@ -115,7 +125,8 @@ bash run_all.sh --fast     # solo anclas del cuerpo + verificación
 - El archivo incluido en `data/` contiene las variables derivadas usadas en el
   análisis, **sin identificadores personales** (N = 14 428 filas, 127 columnas).
 - **Código, tablas y figuras**: CC BY 4.0 (ver `LICENSE`). Si utiliza este
-  repositorio o sus resultados, cite el manuscrito sometido.
+  repositorio o sus resultados, cite el manuscrito sometido; la ficha de
+  citación está en [`CITATION.cff`](CITATION.cff).
 - Los microdatos ENDES son de uso libre para fines estadísticos y de
   investigación; cualquier reutilización debe respetar los términos de
   disponibilidad del INEI y las guías DHS (cita de la encuesta original).
